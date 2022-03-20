@@ -1,0 +1,8 @@
+__pycache__
+_private
+
+build
+dist
+
+deeplkey.txt
+capture.png
