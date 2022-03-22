@@ -1,3 +1,4 @@
+import os
 import cv2
 from PIL import ImageGrab, ImageTk, Image
 import pyautogui
@@ -34,6 +35,12 @@ class Application(tk.Frame):
 
         self.credentialW = CredentialsW(self, translator)
         self.aboutW = AboutW(self)
+
+        try:
+            project_path = os.getcwd()
+            os.mkdir(os.path.join(project_path, "kavt_data"))
+        except:
+            pass
 
         #---Main Window---#
         self.cornersLable = Label(self, "Set the zone of the screen to be translate")
@@ -198,7 +205,7 @@ class Application(tk.Frame):
     def captureWindow(self):
         print("Screen capture")
         if self.bbox.get() is not None or self.bbox.get() == "None":
-            file = open('capture.png', 'wb')
+            file = open('kavt_data/capture.png', 'wb')
             screenshot = ImageGrab.grab(self.bbox.get())
             self.currentCaptureImg.set(screenshot)
             screenshot.save(file, 'PNG')
@@ -210,7 +217,7 @@ class Application(tk.Frame):
     def drawCaptureImage(self):
         drawHeight = 150
         drawWidth = 500
-        img = Image.open("capture.png")
+        img = Image.open("kavt_data/capture.png")
         w, h = img.size
         scale = h / drawHeight
         w = int(w/scale)
@@ -260,7 +267,7 @@ class Application(tk.Frame):
         self.sentencesJpLable.setLabelText("<Translating...>")
         self.sentencesLable.setLabelText("<Translating...>")
         # Read Image
-        img = cv2.imread("capture.png")
+        img = cv2.imread("kavt_data/capture.png")
         # OCR
         text = ocr.extractorOCR(img)
         self.sentencesJpLable.setLabelText(text)

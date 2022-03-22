@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "compiler_test"
-version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+name = "K-AVT"
+version = "0.0.2"
+description = "A tool for translating games through image analysis"
+authors = ["K"]
 
 [tool.poetry.dependencies]
 python = "<3.11,>=3.9"

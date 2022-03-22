@@ -5,7 +5,7 @@ K-AVT is a tool for translating games through image analysis and automatic trans
 
 The tool is based on [Python3](https://www.python.org/) and  [Tkinter](https://docs.python.org/3/library/tkinter.html#module-tkinter).
 
-Screenshots of the game are taken. The images are then analyzed and identified for characters using various OCR tools such as [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) or [EasyOCR](https://github.com/JaidedAI/EasyOCR). The character sequences are sent to translation engines such as [DeepL](https://www.deepl.com/) and [Google](https://translate.google.com/). The translated text is displayed in the tool.
+Screenshots of the game are taken. The images are then analyzed to identify characters using various OCR tools such as [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) and [EasyOCR](https://github.com/JaidedAI/EasyOCR). The character sequences are sent to translation engines such as [DeepL](https://www.deepl.com/) and [Google](https://translate.google.com/). The translated text is displayed in the tool.
 
 # Download Executable version and Use
 
@@ -13,7 +13,12 @@ You can download the latest version of the tool from here.
 
 **The first time you run it, it may take a while to start. It will download some machine learning models from the internet.**
 
-Why is the tool so heavy?
+Why does antivirus give me a warning?:
+
+This version is not officially "signed", so some antivirus may think it is malicious. If you want to continue, add the "kavt.exe" program to your antivirus exception list. 
+If you are suspicious, you can always download this repository and manually run the tool with Python. The code is Open Source and you can clearly see that there is nothing wrong with it.
+
+Why is the tool so heavy?:
 
 The tool uses several models and machine learning tools, including [Torch](https://pytorch.org/). Unfortunately, we have not yet been able to optimize the way we compress the size of the program and Torch contributes to this weight.
 
@@ -27,7 +32,7 @@ Instructions for use:
 
 
 # Install this repo
-The installation of this repo is not straightforward as various AI and ML tools must be supported. That's why we offer the executable version if you just want to use the tool.
+The installation of this repo **is not** straightforward as various AI and ML tools must be supported. That's why we offer the executable version if you just want to use the tool.
 
 In these instructions, whenever we talk about "command", we refer to using such "command" in CMD or PowerShell of Windows.
 
@@ -44,7 +49,7 @@ Validate that you have Ptyhon3.9, Pip and Poetry installed on your computer. If 
 
 ### B) Secondary tools
 
-1) You need to have Visual CCP build tools installed on your computer. This Microsoft tool is used to internally compile some packages. You can find it [here](https://visualstudio.microsoft.com/es/visual-cpp-build-tools/). Restart your computer after performing these actions.
+1) You need to have "Visual CCP Build Tools" installed on your computer. This Microsoft tool is used to internally compile some packages. You can find it [here](https://visualstudio.microsoft.com/es/visual-cpp-build-tools/). Restart your computer after performing these actions.
 
 2) **Optional recommended** If you have an **Nvidia graphics card with CUDA technology** (almost all of them do), you can make the algorithms run much faster. First verify that you have the latest video drives installed. Then install the CUDA specific drivers from [here](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local). **Download Cuda version 11**. After installing the drivers it may be necessary to reboot. You can check if your card is ready to use CUDA using this command: ```nvcc --version``` You should see a series of information displayed including "CUDA version 11".
 
@@ -58,8 +63,8 @@ Validate that you have Ptyhon3.9, Pip and Poetry installed on your computer. If 
 
 # Run
 
-1) In the project directory use the command: ```poetry shell```
-2) Then use the command: ```python kavt.py```. **The first run may be slower, since the OCR models must be downloaded** (automatic).
+1) In the project directory use the command: ```poetry shell``` This will trigger a development environment for the project.
+2) Then use the command: ```python ./kavt.py```. **The first run may be slower, since the OCR models must be downloaded** (automatic).
 
 # Compile
 

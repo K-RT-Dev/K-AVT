@@ -10,7 +10,7 @@ class translatorModule():
         self.debug = debug
         # Load DeepL Key
         try:
-            f = open("deeplkey.txt", "r")
+            f = open("kavt_data/deeplkey.txt", "r")
             defaultKey = f.read()
             f.close()
             if len(defaultKey) == 0:
@@ -35,7 +35,7 @@ class translatorModule():
     # Change DeepL Api Key
     def setDeepLKey(self):
         try:
-            f = open("deeplkey.txt", "r")
+            f = open("kavt_data/deeplkey.txt", "r")
             defaultKey = f.read()
             f.close()
             if len(defaultKey) == 0:

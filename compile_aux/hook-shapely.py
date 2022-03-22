@@ -36,7 +36,7 @@ if compat.is_win:
     try:
         os.environ['PATH'] = os.pathsep.join(lib_paths)
         # Force add dlls from other location.
-        os.environ['PATH'] = r'C:\Users\MSI\Documents\Proyecto Traductor Automatico VN\kavt_compiler\dlls'
+        os.environ['PATH'] = r'C:\Users\MSI\Documents\Proyecto Traductor Automatico VN\k-avt\dlls'
         dll_path = find_library('geos_c')
         dll_path2 = find_library('geos_c-615c861f')
         dll_path3 = find_library('geos-991084f3')

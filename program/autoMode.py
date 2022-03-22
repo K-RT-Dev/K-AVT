@@ -51,7 +51,7 @@ class autoMode():
                         app.sentencesJpLable.setLabelText(text)
 
                         # Guardamos y desplegamos la ultima captura que vamos a analizar
-                        file = open('capture.png', 'wb')
+                        file = open('kavt_data/capture.png', 'wb')
                         app.currentCaptureImg.set(imgNow)
                         imgNow.save(file, 'PNG')
                         file.close()

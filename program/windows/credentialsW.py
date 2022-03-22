@@ -11,7 +11,7 @@ class CredentialsW():
         self.win.geometry("380x60")
         
         try:
-            f = open("deeplkey.txt", "r")
+            f = open("kavt_data/deeplkey.txt", "r")
             defaultKey = f.read()
             f.close()
         except:
@@ -25,7 +25,7 @@ class CredentialsW():
 
     # When the DeepL API Key change
     def setDeeplKey(self, newKey):
-        f = open("deeplkey.txt", "w")
+        f = open("kavt_data/deeplkey.txt", "w")
         f.write(newKey)
         f.close()
         self.translatorRef.setDeepLKey()
