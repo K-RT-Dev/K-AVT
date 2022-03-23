@@ -1,6 +1,8 @@
 # About
 K-AVT is a tool for translating games through image analysis and automatic translators. It is primarily designed to translate visual novels from Japanese into English or Spanish. It is currently a proof of concept and is in alpha.
 
+[Official website of the project](https://theerogereviewer.wordpress.com/k-avt/)
+
 ## How does it work ?
 
 The tool is based on [Python3](https://www.python.org/) and  [Tkinter](https://docs.python.org/3/library/tkinter.html#module-tkinter).
@@ -9,7 +11,10 @@ Screenshots of the game are taken. The images are then analyzed to identify char
 
 # Download Executable version and Use
 
-You can download the latest version of the tool from here.
+You can download the latest version of the tool from:
+- [Anonfiles](https://anonfiles.com/XfT3WfP8x8/kavt_rar)
+- [Gofile](https://gofile.io/d/D4LVW2)
+
 
 **The first time you run it, it may take a while to start. It will download some machine learning models from the internet.**
 
