@@ -1,3 +1,7 @@
+# Development canceled
+This project has been discontinued due to several technical limitations that did not generate a user-friendly product. 
+A new version of this same project is under development. A link to the repository will be published soon.
+
 # About
 K-AVT is a tool for translating games through image analysis and automatic translators. It is primarily designed to translate visual novels from Japanese into English or Spanish. It is currently a proof of concept and is in alpha.
 
